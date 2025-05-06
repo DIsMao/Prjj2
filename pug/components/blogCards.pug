@@ -1,0 +1,16 @@
+mixin blogCards(item)
+   
+      div(class="grid grid-cols-auto-1fr items-center gap-6 w-full rounded-10px p-4 bg-white-c1")
+        div(class="overflow-hidden w-230px h-280px rounded-md")
+          img(src=item.Dimg, alt="", class="w-full h-full object-cover")
+        div(class="grid grid-rows-auto-1fr-auto h-full py-4")
+          
+          p(class="font-bold text-2xl leading-133% text-black-c2 mb-6 cursor-pointer hover:underline")=item.Dtitle
+          p(class="font-normal text-14px leading-143% text-black-c2  overflow-hidden text-Covrflow")=item.Dtext
+          div(class="flex justify-between w-full")
+            p(class="font-bold text-14px leading-143% text-yellow-1")=item.Ddate
+            a(class="font-bold text-14px leading-143% text-black-c1 cursor-pointer") читать статью
+
+
+
+

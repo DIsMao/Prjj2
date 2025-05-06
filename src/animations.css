@@ -1,0 +1,9 @@
+.tripCard:hover .detailTripCard{
+   
+    top: 0px !important;
+}
+
+.galPhoto:hover .opacity-0{
+   
+    opacity: 1;
+}

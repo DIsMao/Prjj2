@@ -1,0 +1,20 @@
+mixin cardsList(item)
+   
+      div(class="w-full h-500px round-32px overflow-hidden relative rounded-32px tripCard")
+        img(src=item.Dimg, alt="", class="absolute w-full h-full object-cover")
+        div(class="rounded-tl-4px rounded-bl-4px px-2 py-1 w-16 h-8 backdrop-filter-blur-4px bg-gray-c2 flex justify-center items-center gap-1 absolute right-0 top-50px")
+            img(src="./src/images/Vector (1).svg", alt="")
+            p(class="font-bold text-14px text-black-c1 leading-129%%")=item.Dscore
+        div(class="h-full w-full backdrop-filter-blur-6px bg-white-smth absolute left-0 top-410px py-5 px-8 duration-500 detailTripCard")
+            div(class="grid grid-rows-1fr-auto h-full w-full justify-start")
+              div()
+                div(class="flex gap-3 justify-between items-center mb-9")
+                    div
+                        p(class="font-bold text-2xl leading-120% text-white-c1")=item.Dtitle
+                        p(class="font-normal text-sm leading-129% text-white-c1")=item.Dtitle2
+                    div(class="py-2 px-4 rounded bg-white-smth")
+                        p(class="font-bold text-xl leading-120% text-white-c1")=item.Dprice + " $"
+
+                p(class="font-normal text-base leading-150% text-white-c1")=item.Dtext
+              div
+                a(class="inline-block pl-6 pr-6 pt-3 pb-3 text-base text-white-c1 bg-black-c1 font-semibold cursor-pointer border border-black-c1 rounded hover:bg-white-c1 hover:text-black-c1 duration-500") Программа тура

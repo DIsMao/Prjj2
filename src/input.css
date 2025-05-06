@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {
+      @apply text-2xl;
+    }
+    h2 {
+      @apply text-xl;
+    }
+    header{
+      width: 100%;
+    }
+    footer{
+      width: 100%;
+    }
+
+    input{
+      border: none;
+      background-color: transparent;
+    }
+
+    @font-face {
+      font-family: 'NEXT';
+      font-style: normal; 
+      font-weight: "Bold";
+      src: url("./fonts/nextart/NEXT_ART_Bold.otf") ;
+    }
+    @font-face {
+      font-family: 'NEXT';
+      font-style: normal; 
+      font-weight: 600;
+      src: url("./fonts/nextart/NEXT_ART_SemiBold.otf") ;
+    }
+    @font-face {
+      font-family: 'NEXT';
+      font-style: normal; 
+      font-weight: 700;
+      src: url("./fonts/nextart/NEXT_ART_Heavy.otf") ;
+    }
+    @font-face {
+      font-family: 'NEXT';
+      font-style: normal;
+      font-weight: "Regular";
+      src: url("./fonts/nextart/NEXT_ART_Regular.otf") ;
+    }
+    @font-face {
+      font-family: 'NunitoSans';
+      font-style: normal;
+      font-weight: "Italic";
+      src: url("./fonts/Nunito_Sans/NunitoSans-Italic-VariableFont_YTLC,opsz,wdth,wght.ttf") ;
+    }
+    @font-face {
+      font-family: 'NunitoSans';
+      font-style: normal;
+      font-weight: "Regular";
+      src: url("./fonts/Nunito_Sans/NunitoSans-VariableFont_YTLC,opsz,wdth,wght.ttf") ;
+    }
+
+  }
+
+  @layer base {
+
+  }
+
+@layer components {
+    .btn {
+      padding: 20px;
+      background-color: red;
+      color: white;
+      border-radius: 10px; 
+    }
+    *{
+        box-sizing: border-box;
+        font-family: "NunitoSans";
+    }
+    .font-NEXT{
+      font-family: "NEXT", sans-serif;
+    }
+    
+    .header{
+      padding: 20px 60px;
+      display: flex;
+      
+    }
+    .footer{
+      padding: 20px 60px ;
+      display: flex;
+      
+    }
+    .grid-col-650px-1fr{
+      grid-template-columns: 650px 1fr;      
+    }
+    .w-500px{
+      width: 500px;      
+    }
+    .p-0-60px{
+      padding: 0 60px;      
+    }
+    .grid-rows-auto-1fr{
+      grid-template-rows: auto 1fr;
+    }
+    .grid-rows-auto-1fr-auto{
+      grid-template-rows: auto 1fr auto;
+    }
+    .grid-rows-1fr-auto{
+      grid-template-rows: 1fr auto;
+    }
+    .backdrop-filter-blur-6px{
+      backdrop-filter: blur(6px);
+    }
+    .backdrop-filter-blur-4px{
+      backdrop-filter: blur(4px);
+    }
+    .grid-cols-1fr-auto{
+      grid-template-columns: 1fr auto;
+    }
+    .grid-cols-auto-1fr{
+      grid-template-columns: auto 1fr;
+    }
+    .text-decoration-none{
+      text-decoration: none;
+    }
+    .grid-4x4-250px{
+      grid-template-columns: 250px 250px;
+      grid-template-rows: 250px 250px;
+    }
+    .grid-cols-12-1fr{
+      grid-template-columns: repeat(12, 1fr);
+    }
+    .grid-col-6span{
+      grid-column: 6 span;
+    }
+    .grid-col-3span{
+      grid-column: 3 span;
+    }
+  }

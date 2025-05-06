@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start-pug": "pug pug/pages --out ./ -w",
+    "start-tw": "npx tailwindcss -i ./src/input.css -o ./src/output.css -w",
+    "dev": "npm-run-all -p -r start-pug start-tw"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "pug": "^3.0.3"
+  }
+}

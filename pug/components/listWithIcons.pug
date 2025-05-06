@@ -1,0 +1,7 @@
+mixin listWI(data)
+    each item in data
+        li(class='flex gap-4 items-center') 
+          img(src=item.Dimage, alt="")
+          div(class="flex flex-wrap flex-col gap-1")
+            p(class="font-bold text-18px leading-111% text-black-c2")=item.Dtitle
+            p(class="font-normal text-sm leading-143%")=item.Dtext

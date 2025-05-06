@@ -1,0 +1,165 @@
+include ../components/listWithIcons.pug
+include ../components/cardsList.pug
+include ../components/blogCards.pug
+doctype html
+html
+    head
+        title My Site
+        link(href="/src/output.css", rel="stylesheet")
+        link(href="/src/animations.css", rel="stylesheet")
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        script(src="./src/libs/jquery-3.7.1.min.js") 
+    body
+        
+        main 
+            div(class="topContainer w-full relative")
+                img(src="./src/images/Rectangle 1.png", alt="", class="absolute top-0 z-0 w-full h-full object-cover")
+                div(class="container h-full mx-auto z-10 relative grid grid-rows-auto-1fr")
+                    include ../components/header.pug
+                    div(class="h-full flex flex-wrap flex-col justify-end")
+                        div(class="pb-20")
+                            h1(class="font-NEXT font-bold text-50px leading-150% text-white-c1 tracking-wide mb-10") Насладись прогулкой в горах <br> с командой единомышленников
+                            div(class="bg-white-smth px-10 py-10 backdrop-filter-blur-6px rounded-xl")
+                                div(class="flex justify-between items-baseline")
+                                    div()
+                                        div(class="grid grid-cols-1fr-auto items-center gap-2 border rounded-lg px-4 py-3 relative w-64 mb-2")
+                                            input(class="hidden" type="text")
+                                            p(class="text-white-c1 text-base font-bold leading-150%") Локация для тура
+                                            img(src="./src/images/ep_arrow-down.svg", alt="", class="openOptListBtn cursor-pointer")
+                                            div(class="hidden optionsList absolute flex flex-wrap flex-col gap-2 bottom-full z-10 bg-white w-full p-3")
+                                                p(class="w-full") Option 1
+                                                p(class="w-full") Option 2
+                                                p(class="w-full") Option 3
+                                        p(class="font-normal text-sm leading-150% text-white-c1 pl-2") выберите из списка
+                                    div()
+                                        div(class="grid grid-cols-1fr-auto items-center gap-2 border rounded-lg px-4 py-3 relative w-64 mb-2")
+                                            input(class="placeholder-white-c1  placeholder:font-bold" type="text" readonly="" placeholder='Дата похода')
+                                            img(src="./src/images/formkit_date.svg", alt="", class="openOptListBtn cursor-pointer")
+                                        p(class="font-normal text-sm leading-150% text-white-c1 pl-2") укажите диапазон
+                                    div()
+                                        div(class="grid grid-cols-1fr-auto items-center gap-2 border rounded-lg px-4 py-3 relative w-64 mb-2")
+                                            input(class="hidden" type="text")
+                                            p(class="text-white-c1 text-base font-bold leading-150%") Участники
+                                            img(src="./src/images/ep_arrow-down.svg", alt="", class="openOptListBtn cursor-pointer")
+                                            div(class="hidden optionsList absolute flex flex-wrap flex-col gap-2 bottom-full z-10 bg-white w-full p-3")
+                                                p(class="w-full") Option 1
+                                                p(class="w-full") Option 2
+                                                p(class="w-full") Option 3
+                                        p(class="font-normal text-sm leading-150% text-white-c1 pl-2") минимум 4 человека
+                                    
+                                    a(class="flex justify-center w-64 pl-6 pr-6 pt-3 pb-3 g text-base text-black-c1 bg-white-c1 font-bold cursor-pointer border border-white-c1 rounded hover:bg-black-c1 hover:text-white-c1 duration-500") Консультация
+            //- ==========================================================
+            div(class="w-full py-24")
+                div(class="container h-full mx-auto z-10 relative grid grid-rows-auto-1fr")
+                    div(class="container mx-auto grid grid-cols-2 items-center")
+                        div(class="relative") 
+                            div(class="absolute z-0")
+                                img(src="./src/images/Rectangle 5.png", alt="Картинка 1",)
+                            div(class="relative z-10 ml-32 mt-32 flex justify-center items-center")
+                               img(src="./src/images/Group 2.svg", alt="", class="absolute z-20 cursor-pointer")
+                               img(src="./src/images/Rectangle 4.png", alt="Картинка 2", class="z-10")
+                               
+                        div(class="")
+                            div(class="text-2xl font-normal uppercase text-yellow-1 mb-2") о нашем походе
+                            h2(class="text-32px text-black-c2 mb-10 font-extrabold") Исследуйте все горные массивы мира вместе с нами
+                            p(class="text-lg mb-10") Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.
+                            a(class="pl-6 pr-6 pt-3 pb-3 text-base text-white-c1 bg-black-c1 font-semibold cursor-pointer border border-black-c1 rounded hover:bg-white-c1 hover:text-black-c1 duration-500") Программа тура
+            //- ==========================================================
+            div(class="w-full py-24 bg-gray-c1")
+                div(class="container h-full mx-auto z-10 relative grid grid-rows-auto-1fr")
+                    div(class="container mx-auto grid grid-cols-2")
+
+                        div(class="")
+                            div(class="text-2xl font-normal uppercase text-yellow-1 mb-2 items-center") наше предложение
+                            h2(class="text-32px text-black-c2 mb-10 font-extrabold") Лучшие программы для тебя
+                            p(class="text-lg mb-10") Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа.
+                            ul(class="flex flex-wrap flex-col gap-10 mb-10")
+                                +listWI([{Dimage: "./src/images/Group 18.png", Dtitle: "Опытный гид", Dtext: "Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации."}, {Dimage: "./src/images/Group 17.png", Dtitle: "Безопасный поход", Dtext: "Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации."}, {Dimage: "./src/images/Group 16.png", Dtitle: "Лояльные цены", Dtext: "Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации."}])
+                            a(href="" class="inline-block pl-6 pr-6 pt-3 pb-3 text-base text-white-c1 bg-black-c1 font-semibold cursor-pointer border border-black-c1 rounded hover:bg-white-c1 hover:text-black-c1 duration-500") Стоимость программ
+
+
+                        div(class="flex justify-end items-center") 
+                            div(class="grid grid-4x4-250px gap-10px")
+                                div(class="overflow-hidden w-full h-full rounded-tr-50px rounded-bl-50px  flex items-center")
+                                    img(src="./src/images/flowerBlock/Rectangle 8.png", alt="Картинка 1", class="w-full h-full object-cover")
+                                div(class="overflow-hidden w-full h-full rounded-tl-50px rounded-br-50px  flex items-center")
+                                    img(src="./src/images/flowerBlock/Rectangle 9.png", alt="Картинка 2", class="w-full h-full object-cover")
+                                div(class="overflow-hidden w-full h-full rounded-tl-50px rounded-br-50px  flex items-center")
+                                    img(src="./src/images/flowerBlock/Rectangle 10.png", alt="Картинка 3", class="w-full h-full object-cover")
+                                div(class="overflow-hidden w-full h-full rounded-tr-50px rounded-bl-50px  flex items-center")
+                                    img(src="./src/images/flowerBlock/Rectangle 11.png", alt="Картинка 4 ", class="w-full h-full object-cover")
+            //- ==========================================================
+            div(class="w-full py-24")
+                div(class="container h-full mx-auto flex items-center flex-col")
+                    div(class="text-2xl font-normal uppercase text-yellow-1 mb-2 items-center") по версии отдыхающих
+                    h2(class="text-32px text-black-c2 mb-12 font-extrabold") Популярные направления
+                    div(class="w-full relative grid grid-cols-3 gap-5 mb-12")
+                        +cardsList({Dimg: "./src/images/bgImg1.png", Dscore: "4.9",Dtitle: "Озеро возле гор",Dtitle2: "романтическое приключение",Dprice: "500",Dtext: 'Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.'})
+                        +cardsList({Dimg: "./src/images/bgImg2.png", Dscore: "4.5",Dtitle: "Ночь в горах",Dtitle2: "в компании друзей",Dprice: "480",Dtext: 'Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.'})
+                        +cardsList({Dimg: "./src/images/bgImg3.png", Dscore: "5.0",Dtitle: "Йога в горах",Dtitle2: "для тех, кто забоится о себе",Dprice: "230",Dtext: 'Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.'})
+                    a(class="inline-block pl-6 pr-6 pt-3 pb-3 text-base text-white-c1 bg-black-c1 font-semibold cursor-pointer border border-black-c1 rounded hover:bg-white-c1 hover:text-black-c1 duration-500") Рейтинг направлений
+            //- ==========================================================
+            div(class="w-full py-24 bg-gray-c1")
+                div(class="container h-full mx-auto flex items-center flex-col")
+                    div(class="text-2xl font-normal uppercase text-yellow-1 mb-2 items-center") делимся впечатлениями
+                    h2(class="text-32px text-black-c2 mb-12 font-extrabold") Блог о путешествиях
+                    div(class="w-full relative grid grid-cols-2 gap-5 mb-12")
+                        +blogCards({Dimg: "./src/images/blogCards/cardImg1.png",Dtitle: "Красивая Италя, какая она в реальности?",Dtext: "Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации.",Ddate: "01/04/2023",})
+                        +blogCards({Dimg: "./src/images/blogCards/cardImg2.png",Dtitle: "Долой сомнения! Весь мир открыт для вас!",Dtext: "Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации ... независимые способы реализации соответствующих условий активизации ...Для современного мира базовый вектор развития предполагает независимые способы реализации соответствующих условий активизации ... независимые способы реализации соответствующих условий активизации ....",Ddate: "01/04/2023",})
+                        +blogCards({Dimg: "./src/images/blogCards/cardImg4.png",Dtitle: "Как подготовиться к путешествию в одиночку? ",Dtext: "Для современного мира базовый вектор развития предполагает.",Ddate: "01/04/2023",})
+                        +blogCards({Dimg: "./src/images/blogCards/cardImg3.png",Dtitle: "Индия ... летим?",Dtext: "Для современного мира базовый.",Ddate: "01/04/2023",})
+                    a(class="inline-block pl-6 pr-6 pt-3 pb-3 text-base text-white-c1 bg-black-c1 font-semibold cursor-pointer border border-black-c1 rounded hover:bg-white-c1 hover:text-black-c1 duration-500") Другие материалы
+            
+            
+            
+            //- ==========================================================
+            div(class="w-full py-24 ")
+                div(class="container h-full mx-auto flex items-center flex-col")
+                    div(class="text-2xl font-normal uppercase text-yellow-1 mb-2 items-center") фото-отчет
+                    h2(class="text-32px text-black-c2 mb-12 font-extrabold") Делимся впечатлениями
+                    div(class="w-full relative grid grid-cols-12-1fr gap-5 mb-12")
+                        div(class="grid-col-6span relative galPhoto")
+                           
+                            div(class="opacity-0 flex justify-center items-center bg-black-c3 absolute w-full h-full duration-500 cursor-pointer")
+                                img(src="./src/images/iconamoon_zoom-in-light.svg", alt="")
+                            img(src="./src/images/photoGal/photoGal1.png", alt="",class="w-full")
+
+                        div(class="grid-col-3span relative galPhoto")
+                            
+                            div(class="opacity-0 flex justify-center items-center bg-black-c3 absolute w-full h-full duration-500 cursor-pointer")
+                                img(src="./src/images/iconamoon_zoom-in-light.svg", alt="")
+                            img(src="./src/images/photoGal/photoGa2.png", alt="",class="w-full")
+
+                        div(class="grid-col-3span relative galPhoto")
+                                                   
+                            div(class="opacity-0 flex justify-center items-center bg-black-c3 absolute w-full h-full duration-500 cursor-pointer")
+                                img(src="./src/images/iconamoon_zoom-in-light.svg", alt="")
+                            img(src="./src/images/photoGal/photoGal3.png", alt="",class="w-full")
+
+                        div(class="grid-col-3span relative galPhoto")
+                                                 
+                            div(class="opacity-0 flex justify-center items-center bg-black-c3 absolute w-full h-full duration-500 cursor-pointer")
+                                img(src="./src/images/iconamoon_zoom-in-light.svg", alt="")
+                            img(src="./src/images/photoGal/photoGal4.png", alt="",class="w-full")
+
+                        div(class="grid-col-6span relative galPhoto")
+                                                   
+                            div(class="opacity-0 flex justify-center items-center bg-black-c3 absolute w-full h-full duration-500 cursor-pointer")
+                                img(src="./src/images/iconamoon_zoom-in-light.svg", alt="")
+                            img(src="./src/images/photoGal/photoGal5.png", alt="",class="w-full")
+
+                        div(class="grid-col-3span relative galPhoto")
+                                                   
+                            div(class="opacity-0 flex justify-center items-center bg-black-c3 absolute w-full h-full duration-500 cursor-pointer")
+                                img(src="./src/images/iconamoon_zoom-in-light.svg", alt="")
+                            img(src="./src/images/photoGal/photoGal6.png", alt="",class="w-full")
+
+                    a(class="inline-block pl-6 pr-6 pt-3 pb-3 text-base text-white-c1 bg-black-c1 font-semibold cursor-pointer border border-black-c1 rounded hover:bg-white-c1 hover:text-black-c1 duration-500") Наш pinterest
+                             
+                                        
+               
+
+                //- include ../components/footer.pug
+    script(src="./src/js/main.js") 
+        
