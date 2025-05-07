@@ -1,4 +1,54 @@
-footer
+include ../components/footerLinkList.pug
+footer(class="w-full flex flex-wrap flex-col items-center bg-black-c1 relative")
+    div(class="md:px-0 px-5 container absolute lg:top-m98px bottom-full-pls50px")
+        div(class="w-full flex lg:flex-nowrap flex-wrap  lg:flex-row flex-col  lg:justify-between lg:items-center items-start bg-white-c1 box-sdw  2xl:px-24 px-6 2xl:py-0 py-6 lg:h-196px h-auto  ")  
+            div(class="lg:w-96 w-full   lg:mb-0 mb-4")
+                p(class="text-lg leading-111% font-normal text-yellow-1 mb-2") актуально
+                p(class="text-26px leading-120% text-black-c2 font-extrabold") Получайте полезные рассылки о путешествиях
+            div(class="flex flex-wrap flex-col lg:gap-2 gap-0 lg:w-536px w-full ")
+                p(class="text-base leading-125% font-semibold text-black-c2 lg:mb-0 mb-2") Введите e-mail адрес
+                div(class="flex gap-4 lg:flex-nowrap flex-wrap  lg:flex-row flex-col lg:mb-0 mb-6") 
+                    div(class="w-280px py-3 px-4 bg-gray-c1")
+                        input(class="w-full placeholder-black-c2 text-14px placeholder:text-14px placeholder:leading-143% placeholder:font-light",type='email' placeholder="name@domain.com")
+                    a(class="width-content inline-block pl-6 pr-6 pt-3 pb-3 text-base text-white-c1 bg-black-c1 font-semibold cursor-pointer border border-black-c1 rounded hover:bg-white-c1 hover:text-black-c1 duration-500") Подписаться на новости
+                p(class="text-14px leading-129% font-semibold text-black-c2") подписываясь на новости, вы автоматически соглашаетесь 
+                    span(class="underline") с условиями обработки персональных данных и правилами рекламных рассылок
+
+    div(class="md:px-0 px-5 container h-full mx-auto grid lg:grid-cols-480px-1fr gap-5 lg:pt-44 pt-12  pb-20")
+        div(class="lg:mb-0 mb-12 ")
+            p(class="text-xl leading-120% font-bold text-white-c1 mb-4") Компания «РумТибет»
+            p(class="text-14px leading-143% font-normal text-white-c1 lg:mb-20 mb-7  ") Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney.
+            div(class="flex gap-6 mb-8")
+                a(class="text-14px leading-129% underline font-normal text-white-c1 mb-5") info@domain.com
+                a(class="text-14px leading-129% underline font-normal text-white-c1 mb-5") +7 (123) 456-78-90
+            div(class="flex gap-4") 
+                a(href="")
+                    img(src="./src/images/socialIcons/entypo-social_vk-with-circle.svg", alt="") 
+                a(href="")
+                    img(src="./src/images/socialIcons/ic_baseline-telegram.svg", alt="") 
+                a(href="")
+                    img(src="./src/images/socialIcons/mdi_pinterest.svg", alt="") 
+                a(href="")
+                    img(src="./src/images/socialIcons/mdi_skype.svg", alt="") 
+
+
+        div(class="flex justify-between md:flex-nowrap flex-wrap  md:flex-row flex-col md:gap-0 gap-12 ")
+            div(class="max-w-280px")
+                p(class="text-xl leading-120% font-bold text-white-c1 mb-5") Наши услуги
+                +footerList([{name: "Прогулки в горы летом", type: "old"},{name: "Посещение храмов в горах", type: "old"},{name: "Зимние походы в горы", type: "old"},{name: "Экстремальные виды туризма", type: "old"},{name: "Походы в джунглях Амазонии", type: "new"},{name: "Поездка в Африку", type: "old"}])
+            div(class="max-w-280px")
+                p(class="text-xl leading-120% font-bold text-white-c1 mb-5") Важно для путешествий
+                +footerList([{name: "Как собрать в долгий поход?", type: "old"},{name: "Жизненно важные предметы для похода", type: "old"},{name: "Медицинская страховка, гарантии безопасности", type: "old"},{name: "Если вы врач - загляните сюда", type: "old"}])
+
+               
+    div(class="w-full flex  justify-between bg-black-c2 relative")
+        div(class="container mx-auto flex justify-between py-6 md:flex-nowrap flex-wrap  md:flex-row flex-col items-center gap-2")
+            p(class="text-14px leading-129%  font-semibold text-white-c1") ИП Константинопольский К.К., 2023
+            p(class="text-14px leading-129%  font-semibold text-white-c1") Политика обработки персональных данных
+
+
+        
+
 
 
 

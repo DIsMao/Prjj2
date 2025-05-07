@@ -1,0 +1,8 @@
+mixin footerList(data)
+  ul(class="flex flex-wrap flex-col gap-4")
+    each item in data
+        li()
+          a(class="flex gap-1 items-start fotterListItem text-white-c1 hover:text-yellow-1 cursor-pointer")
+            p(class="text-14px leading-129% font-normal")=item.name
+              if(item.type == "new")
+                span(class="text-12px leading-133%% font-bold lowercase text-black-c1 py-2px px-10px rounded-4px bg-white ml-2") new

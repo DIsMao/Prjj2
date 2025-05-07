@@ -135,4 +135,45 @@
     .grid-col-3span{
       grid-column: 3 span;
     }
+    .box-sdw{
+      box-shadow: 0 0 15px 0 rgba(24, 18, 30, 0.12);
+
+    }
+    .grid-cols-480px-1fr{
+      grid-template-columns: 480px 1fr;
+    }
+    .grid-cols-480px-1fr{
+      grid-template-columns: 480px 1fr;
+    }
+
+    .topForm{
+      display: grid;
+      grid-template-areas:
+      "A A A A   B B B B"
+      "C C C C   C C C C"
+      "D D D D   D D D D";
+      gap: 10px;
+    }
+    .topForm .area1{
+      grid-area: A;
+    }
+    .topForm .area2{
+      grid-area: B;
+    }
+    .topForm .area3{
+      grid-area: C;
+    }
+    .topForm .area4{
+      grid-area: D;
+    }
+    .width-content{
+      width: fit-content;
+    }
+    .bottom-full-pls50px{
+      bottom: calc(100% + 50px);
+    }
+    .blogCardheight{
+      height: 100%;
+    }
+
   }

@@ -7,3 +7,23 @@
    
     opacity: 1;
 }
+
+.fotterListItem::before{
+    content: "";
+    height: 10px;
+    width: 6px;
+    margin-top: 3px;
+    background-image: url('/src/images/arrowR.svg');
+}
+
+
+.fotterListItem:hover p{
+    text-decoration: underline;
+}
+
+.fotterListItem:hover:before{
+    background-image: url('/src/images/arrowRY.svg');
+}
+.owl-stage{
+    display: flex;
+}
